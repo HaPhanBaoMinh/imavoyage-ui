@@ -10,6 +10,10 @@
   background-color: rgba(182, 182, 182, 0.062) !important;
 }
 
+.h-fit {
+  height: fit-content !important
+}
+
 .hover:hover {
   cursor: pointer;
 }
@@ -24,8 +28,85 @@ body {
   z-index: 99999;
 }
 
-#img {
+#swiper-background {
   background-size: 100% 100%;
   transition: background-image 0.5s ease-out;
   background-repeat: no-repeat;
+  position: relative;
+  /* background-size: cover */
+}
+
+#swiper-background::after {
+  width: 100%;
+  height: 100%;
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.336);
+  top: 0
+}
+
+.z-2 {
+  z-index: 2;
+}
+
+.fw-500 {
+  font-weight: 500
+}
+
+.bottom-15 {
+  bottom: 15%
+}
+
+.spectral {
+  font-family: 'Spectral', serif;
+}
+
+.swiper-pagination-bullet {
+  background-color: white !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #f9bf57 !important;
+}
+
+
+/* .navbar-collapse-open {
+  max-height: auto;
+  transition: 1s ease-in-out;
+}
+
+.navbar-collapse-close {
+  height: 0;
+  transition: 1s ease-in-out;
+}
+
+.navbar-collapse {
+  overflow: hidden;
+} */
+
+.header-mobile-hidden {
+  display: none;
+}
+
+.navbar-collapse {
+  /* Thiết lập giá trị mặc định cho max-height */
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.7s ease;
+}
+
+.navbar-collapse-open {
+  /* Đặt max-height lớn hơn để hiển thị nội dung */
+  max-height: 500px;
+}
+
+.navbar-collapse-close {
+  /* Đặt max-height là 0 để ẩn nội dung */
+  max-height: 0;
+}
+
+.header-mobile-navbar {
+  padding: 0 !important;
 }
